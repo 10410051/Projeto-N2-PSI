@@ -1,3 +1,5 @@
-public class EntradaInteira {
+public class EntradaInteira extends Entrada {
     
 }
+    
+
