@@ -1,3 +1,3 @@
-public class EntradaMeia {
+public class EntradaMeia extends Entrada {
     
 }
