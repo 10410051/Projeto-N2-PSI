@@ -1,9 +1,7 @@
 public abstract class Entrada {
     protected int numeroDoAssento;
-    protected Espetaculo espetaculo;
 
-    public Entrada(Espetaculo espetaculo, int numeroDoAssento) {
-        this.espetaculo = espetaculo;
+    public Entrada(int numeroDoAssento) {
         this.numeroDoAssento = numeroDoAssento;
     }
 
@@ -12,9 +10,4 @@ public abstract class Entrada {
     }
 
     public abstract double calculaValor();
-
-    @Override
-    public String toString() {
-        return String.format("Assento %02d - R$ %.2f", numeroDoAssento, calculaValor());
-    }
 }

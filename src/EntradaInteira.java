@@ -1,6 +1,9 @@
 public class EntradaInteira extends Entrada {
+    private Espetaculo espetaculo;
+
     public EntradaInteira(Espetaculo espetaculo, int numeroDoAssento) {
-        super(espetaculo, numeroDoAssento);
+        super(numeroDoAssento);
+        this.espetaculo = espetaculo;
     }
 
     @Override

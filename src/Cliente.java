@@ -1,35 +1,24 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class Cliente {
     private String nome;
     private String cpf;
-    private List<Pedido> pedidos;
+    private ArrayList<Pedido> pedidos = new ArrayList<>();
 
     public Cliente(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
-        this.pedidos = new ArrayList<>();
     }
 
-    public String getNome() {
-        return nome;
+    public void adicionaPedido(Pedido pedido) {
+        pedidos.add(pedido);
     }
 
     public String getCpf() {
         return cpf;
     }
 
-    public void adicionaPedido(Pedido p) {
-        pedidos.add(p);
-    }
-
-    public List<Pedido> getPedidos() {
-        return pedidos;
-    }
-
-    @Override
-    public String toString() {
-        return String.format("%s - CPF: %s", nome, cpf);
+    public String getNome() {
+        return nome;
     }
 }
