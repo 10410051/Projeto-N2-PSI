@@ -8,7 +8,23 @@ public class Teatro {
     private ArrayList<Cliente> clientes = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
-    public Teatro() {}
+    public Teatro() {
+        Espetaculo espetaculoPadrao = new Espetaculo(
+            "O Fantasma da Ópera",
+            "25/12/2025",
+            "20:00",
+            120.00
+        );
+        this.adicionarEspetaculo(espetaculoPadrao);
+
+        Espetaculo espetaculo2 = new Espetaculo(
+            "O Rei Leão", 
+            "30/12/2025", 
+            "21:00", 
+            150.00
+        );
+        this.adicionarEspetaculo(espetaculo2);
+    }
 
     public void novaCompra() {
         carrinho = new Pedido();
