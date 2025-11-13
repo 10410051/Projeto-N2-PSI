@@ -16,7 +16,7 @@ public class MackTheather {
             int opcao = Integer.parseInt(sc.nextLine());
 
             switch (opcao) {
-                case 1 -> {
+                case 1: {
                     System.out.println("*** CADASTRO DE ESPETÁCULO ***");
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
@@ -28,7 +28,7 @@ public class MackTheather {
                     double preco = Double.parseDouble(sc.nextLine());
                     teatro.adicionarEspetaculo(new Espetaculo(nome, data, hora, preco));
                 }
-                case 2 -> {
+                case 2: {
                     System.out.println("*** CADASTRO DE CLIENTE ***");
                     System.out.print("Nome: ");
                     String nome = sc.nextLine();
@@ -36,9 +36,9 @@ public class MackTheather {
                     String cpf = sc.nextLine();
                     teatro.adicionarCliente(new Cliente(nome, cpf));
                 }
-                case 3 -> teatro.novaCompra();
-                case 4 -> sair = true;
-                default -> System.out.println("Opção inválida.");
+                case 3: teatro.novaCompra();
+                case 4: sair = true;
+                default: System.out.println("Opção inválida.");
             }
         }
 

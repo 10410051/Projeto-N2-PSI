@@ -37,12 +37,17 @@ public class Espetaculo {
             return null;
         }
         marcarAssento(assento);
-        return switch (tipo) {
-            case 1 -> new EntradaInteira(this, assento);
-            case 2 -> new EntradaMeia(this, assento);
-            case 3 -> new EntradaProfessor(this, assento);
-            default -> null;
-        };
+        
+        switch (tipo) {
+            case 1:
+                return new EntradaInteira(this, assento);
+            case 2:
+                return new EntradaMeia(this, assento);
+            case 3:
+                return new EntradaProfessor(this, assento);
+            default:
+                return null;
+        }
     }
 
     public double getPreco() {
